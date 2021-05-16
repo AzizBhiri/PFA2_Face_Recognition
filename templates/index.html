@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>facial recognition</title>
+  <link href="{{url_for('static', filename = 'icon.ong')}}" rel="icon">
+
+
+
+  <link href="{{url_for('static', filename = 'bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="#" class="logo">
+                        <img src="{{url_for('static', filename = 'logo.png')}}" alt="Softy Pinko"/>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="#bg" class="active">Home</a></li>
+                        <li><a href="#main">Recognition</a></li>
+                    </ul>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+  <section id="bg" class="d-flex flex-column align-items-center justify-content-center">
+    <h1>Facial Recognition</h1>
+    <a href="#begin" class="btn-get-started ">Get Started</a>
+  </section>
+
+  <main id="main">
+    <section id="begin" class="begin">
+
+      <div class="container">
+        
+        <h1 class="d-flex flex-column align-items-center justify-content-center" >Upload new File</h1>
+          <div class="d-flex flex-column align-items-center ">
+            <form action="" method="post" enctype=multipart/form-data>
+              <label for="files" class="main-button-slider">Select video</label>
+              <input id="files" style="visibility:hidden;" type="file" name="file">
+              <label for="submit" class="main-button-slider">Upload video</label>
+              <input id="submit" style="visibility:hidden;" type="submit" value="Upload">
+            </form>
+          </div>
+      </div>
+  
+    </section>
+  </main>
+
+
+  <footer id="footer">
+      <div class="credits">
+        réalisé par 
+        <a href="#" style="color: #d43076;">Med Ali Ben elHaj Aissa  </a> 
+        et
+        <a href="#" type="email"  style="color: #d43076;"> Aziz Bhiri </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="{{url_for('static', filename = 'app.js')}}"></script>
+  
+
+</body>
+
+</html>
