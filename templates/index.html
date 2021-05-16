@@ -39,18 +39,19 @@
 </header>
 
   <section id="bg" class="d-flex flex-column align-items-center justify-content-center">
-    <h1>Facial Recognition</h1>
-    <a href="#begin" class="btn-get-started ">Get Started</a>
+    <!-- <h1>Facial Recognition</h1> -->
+    <canvas id="atoms"></canvas>
+    <!-- <a href="#begin" class="btn-get-started ">Get Started</a> -->
   </section>
 
   <main id="main">
     <section id="begin" class="begin">
 
-      <div class="container">
+      <div class="container" style="font-family: 'Courier New', Courier, monospace;">
         
-        <h1 class="d-flex flex-column align-items-center justify-content-center" >Upload new File</h1>
+        <h1 class="d-flex flex-column align-items-center justify-content-center" style="font-family: 'Courier New', Courier, monospace;">Upload new File</h1>
           <div class="d-flex flex-column align-items-center ">
-            <form action="" method="post" enctype=multipart/form-data>
+            <form action="" method="post" enctype="multipart/form-data">
               <label for="files" class="main-button-slider">Select video</label>
               <input id="files" style="visibility:hidden;" type="file" name="file">
               <label for="submit" class="main-button-slider">Upload video</label>
@@ -63,18 +64,19 @@
   </main>
 
 
-  <footer id="footer">
+  <footer id="footer" style="font-family: 'Courier New', Courier, monospace;">
       <div class="credits">
-        réalisé par 
-        <a href="#" style="color: #d43076;">Med Ali Ben elHaj Aissa  </a> 
-        et
-        <a href="#" type="email"  style="color: #d43076;"> Aziz Bhiri </a>
+        Realised By
+        <a href="#" style="color: #d43076;">M.ALI BENELHAJ AISSA </a> 
+        &
+        <a href="#" type="email"  style="color: #d43076;"> AZIZ BHIRI ©</a>
       </div>
     </div>
   </footer>
 
 
-  <script src="{{url_for('static', filename = 'app.js')}}"></script>
+  <script src="{{url_for('static', filename = 'atoms.js')}}"></script>
+
   
 
 </body>

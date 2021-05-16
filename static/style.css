@@ -72,6 +72,7 @@ section {
   padding-top: 8px;
   text-align: center;
   font-size: 13px;
+  font-family: 'Courier New', Courier, monospace;
 }
 label.main-button-slider {
   font-size: 13px;
@@ -158,4 +159,13 @@ header
   }
 }
 
+#atoms{
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 
+}
