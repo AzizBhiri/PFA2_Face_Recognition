@@ -5,7 +5,8 @@ function atomsTracker() {
     ctx.canvas.width = window.innerWidth;
 
     let particleArray = [];
-    const nbr = window.innerWidth / 5;
+    const nbr = window.innerWidth / 12;
+    const colors = ['#ffffff', '#dd5a92']
 
     let mouse = {
         x: null, y: null, radius: (canvas.width / 150) * (canvas.height / 150)
@@ -29,9 +30,9 @@ function atomsTracker() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-            ctx.fillStyle = 'rgba(255,255,255,0.2)';
+            ctx.fillStyle = this.color;
             ctx.fill();
-            ctx.strokeStyle = this.color;
+            ctx.strokeStyle = '#ffffff';
             ctx.stroke();
         }
 
@@ -75,13 +76,13 @@ function atomsTracker() {
     function init() {
         particleArray = [];
         for (let i = 0; i < nbr; i++) {
-            // let size = Math.random() * 10;
+            //let size = Math.random() * 10;
             let size = Math.random() * 20;
             let x = (Math.random() * ((innerWidth - size * 2) - size * 2)) + size * 2;
             let y = (Math.random() * ((innerHeight - size * 2) - size * 2)) + size * 2;
             let directionX = (Math.random() - 0.5) * 2;
             let directionY = (Math.random() - 0.5) * 2;
-            let color = '#ffffff';
+            let color = colors[Math.floor(Math.random()* colors.length)];;
             particleArray.push(new Particle(x, y, directionX, directionY, size, color));
         }
     }
@@ -94,13 +95,13 @@ function atomsTracker() {
                 let distance = ((particleArray[a].x - particleArray[b].x) * (particleArray[a].x - particleArray[b].x)) + ((particleArray[a].y - particleArray[b].y) * (particleArray[a].y - particleArray[b].y));
                 if (distance < (canvas.height / 7) * (canvas.width / 7)) {
                     opacityValue = 1 - (distance / 20000);
-                    ctx.strokeStyle = 'rgba(0,0,0,' + opacityValue + ')';
+                    ctx.strokeStyle = 'rgba(255,255,255,' + opacityValue + ')';
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particleArray[a].x, particleArray[a].y);
                     ctx.lineTo(particleArray[b].x, particleArray[b].y);
                     ctx.stroke();
-                    ctx.setLineDash(pattern);
+                    //ctx.setLineDash(pattern);
                 }
 
             }
@@ -114,7 +115,7 @@ function atomsTracker() {
         for (let i = 0; i < particleArray.length; i++) {
             particleArray[i].update();
         }
-        //connect();
+        connect();
     }
 
     window.addEventListener('resize', function () {
@@ -133,4 +134,4 @@ function atomsTracker() {
 }
 
 atomsTracker();
-console.log('success 1!');
+console.log('success 4!');
