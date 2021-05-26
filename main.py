@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 
 UPLOAD_FOLDER = 'upload/'
-ALLOWED_EXTENSIONS = set(['txt', 'mp4', 'mov'])
+ALLOWED_EXTENSIONS = set(['mp4', 'mov', '3gp'])
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
